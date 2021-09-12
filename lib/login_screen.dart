@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hyre_hackathon_prj/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -66,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                   minWidth: MediaQuery.of(context).size.width,
                   height: 42,
                   onPressed: () {
-
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
                   },
                   child: Text(
                     'LOG IN',
