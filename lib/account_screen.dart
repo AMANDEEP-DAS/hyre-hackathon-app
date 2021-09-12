@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hyre_hackathon_prj/seller_screen.dart';
 
 import 'home_screen.dart';
 
@@ -65,7 +66,7 @@ class AccountScreen extends StatelessWidget {
                     minWidth: MediaQuery.of(context).size.width,
                     height: 42,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SellerScreen()));
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Switched to Seller')));
                     },
                     child: Text(

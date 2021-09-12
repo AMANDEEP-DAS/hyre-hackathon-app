@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hyre_hackathon_prj/account_screen.dart';
-import 'package:hyre_hackathon_prj/website_dev_screen.dart';
+import 'package:hyre_hackathon_prj/login_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class SellerScreen extends StatelessWidget {
+  const SellerScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +26,12 @@ class HomeScreen extends StatelessWidget {
         actions: [
           Row(
             children: [
-              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>AccountScreen()));},child: Icon(Icons.account_circle,color: Colors.black,)),
+              GestureDetector(onTap: (){},child: Icon(Icons.account_circle,color: Colors.black,)),
               SizedBox(width: 25,),
               GestureDetector(
                   onTap: (){
-                    Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Logged out')));
                   },
                   child: Icon(Icons.logout,color: Colors.black,))
             ],
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 50,),
               Column(
                 children: [
-                  Text('POPULAR SERVICES',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 20),),
+                  Text('JOIN HYRE COMMUNITY',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 20),),
                   SizedBox(height: 15,),
                   Container(
                     height: 120,
@@ -116,6 +116,8 @@ class HomeScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
+                              Text('I AM A',style: TextStyle(fontWeight: FontWeight.bold),),
+                              SizedBox(height: 0,),
                               Text('LOGO DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
                               SizedBox(height: 10,),
                               Container(
@@ -129,7 +131,8 @@ class HomeScreen extends StatelessWidget {
                               )
                             ],
                           ),
-                        )
+                        ),
+
                       ],
                     ),
                   ),
@@ -159,6 +162,7 @@ class HomeScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              Text('I AM A',style: TextStyle(fontWeight: FontWeight.bold),),
                               Text('CONTENT WRITER',style: TextStyle(fontWeight: FontWeight.bold),),
                               SizedBox(height: 10,),
                               Container(
@@ -166,7 +170,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 50,
                                 decoration: BoxDecoration(
                                     color: Colors.deepOrange,
-                                  borderRadius: BorderRadius.all(Radius.circular(10))
+                                    borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
                                 child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
                               )
@@ -185,61 +189,60 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                  ),SizedBox(height: 35,),
-                  GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>WebScreen()));
-                    },
-                    child: Container(
-                      height: 120,
-                      width: MediaQuery.of(context).size.width/1.2,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            height: 120,
-                            width: MediaQuery.of(context).size.width/2.4,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage('https://source.unsplash.com/1000x1000/?developer'),
-                                fit: BoxFit.fill,
-                              ),
+                  ),
+                  SizedBox(height: 35,),
+                  Container(
+                    height: 120,
+                    width: MediaQuery.of(context).size.width/1.2,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 120,
+                          width: MediaQuery.of(context).size.width/2.4,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage('https://source.unsplash.com/1000x1000/?developer'),
+                              fit: BoxFit.fill,
                             ),
                           ),
-                          Container(
-                            padding: EdgeInsets.only(right: 10),
-                            height: 120,
-                            width: MediaQuery.of(context).size.width/2.4,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text('WEBSITE DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
-                                SizedBox(height: 10,),
-                                Container(
-                                  padding: EdgeInsets.all(5),
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                      color: Colors.deepOrange,
-                                      borderRadius: BorderRadius.all(Radius.circular(10))
-                                  ),
-                                  child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                        Container(
+                          height: 120,
+                          width: MediaQuery.of(context).size.width/2.4,
+                          padding: EdgeInsets.only(right: 10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text('I AM A',style: TextStyle(fontWeight: FontWeight.bold),),
+                              SizedBox(height: 0,),
+                              Text('WEBSITE DEVELOPER',style: TextStyle(fontWeight: FontWeight.bold),),
+                              SizedBox(height: 10,),
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.deepOrange,
+                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                ),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                              )
+                            ],
+                          ),
+                        ),
+
+                      ],
                     ),
                   ),
                   SizedBox(height: 15,),
@@ -337,7 +340,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   )
                 ],
-              ),
+              )
             ],
           ),
         ),
