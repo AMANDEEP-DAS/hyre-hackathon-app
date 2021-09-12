@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hyre_hackathon_prj/account_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           Row(
             children: [
-              Icon(Icons.account_circle,color: Colors.black,),
+              GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>AccountScreen()));},child: Icon(Icons.account_circle,color: Colors.black,)),
               SizedBox(width: 25,),
               GestureDetector(
                   onTap: (){
@@ -105,13 +107,27 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 10,),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('LOGO DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
-                          ],
+                        Container(
+                          height: 120,
+                          width: MediaQuery.of(context).size.width/2.4,
+                          padding: EdgeInsets.only(right: 10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text('LOGO DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
+                              SizedBox(height: 10,),
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.deepOrange,
+                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                ),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
@@ -143,6 +159,16 @@ class HomeScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('CONTENT WRITER',style: TextStyle(fontWeight: FontWeight.bold),),
+                              SizedBox(height: 10,),
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.deepOrange,
+                                  borderRadius: BorderRadius.all(Radius.circular(10))
+                                ),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                              )
                             ],
                           ),
                         ),
@@ -185,13 +211,27 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 10,),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('WEBSITE DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
-                          ],
+                        Container(
+                          padding: EdgeInsets.only(right: 10),
+                          height: 120,
+                          width: MediaQuery.of(context).size.width/2.4,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text('WEBSITE DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
+                              SizedBox(height: 10,),
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.deepOrange,
+                                    borderRadius: BorderRadius.all(Radius.circular(10))
+                                ),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),

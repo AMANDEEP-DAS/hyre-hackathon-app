@@ -68,6 +68,7 @@ class LoginScreen extends StatelessWidget {
                   height: 42,
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Welcome Amandeep Das!')));
                   },
                   child: Text(
                     'LOG IN',
