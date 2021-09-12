@@ -40,7 +40,12 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                color: Colors.blue,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage('https://source.unsplash.com/1000x1000/?work,office'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height/3,
                 child: Column(
@@ -93,7 +98,12 @@ class HomeScreen extends StatelessWidget {
                         Container(
                           height: 120,
                           width: MediaQuery.of(context).size.width/2.4,
-                          color: Colors.yellow,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage('https://source.unsplash.com/1000x1000/?designer'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
                         ),
                         SizedBox(width: 10,),
                         Column(
@@ -132,14 +142,19 @@ class HomeScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('LOGO DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
+                              Text('CONTENT WRITER',style: TextStyle(fontWeight: FontWeight.bold),),
                             ],
                           ),
                         ),
                         Container(
                           height: 120,
                           width: MediaQuery.of(context).size.width/2.4,
-                          color: Colors.yellow,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage('https://source.unsplash.com/1000x1000/?writer'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
                         )
                       ],
                     ),
@@ -163,14 +178,19 @@ class HomeScreen extends StatelessWidget {
                         Container(
                           height: 120,
                           width: MediaQuery.of(context).size.width/2.4,
-                          color: Colors.yellow,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage('https://source.unsplash.com/1000x1000/?developer'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
                         ),
                         SizedBox(width: 10,),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('LOGO DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
+                            Text('WEBSITE DESIGNER',style: TextStyle(fontWeight: FontWeight.bold),),
                           ],
                         )
                       ],
