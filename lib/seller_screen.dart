@@ -127,7 +127,7 @@ class SellerScreen extends StatelessWidget {
                                     color: Colors.deepOrange,
                                     borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
-                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white,fontSize: 10),)),
                               )
                             ],
                           ),
@@ -172,7 +172,7 @@ class SellerScreen extends StatelessWidget {
                                     color: Colors.deepOrange,
                                     borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
-                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white,fontSize: 10),)),
                               )
                             ],
                           ),
@@ -236,7 +236,7 @@ class SellerScreen extends StatelessWidget {
                                     color: Colors.deepOrange,
                                     borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
-                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white),)),
+                                child: Center(child: Text('MORE',style: TextStyle(color: Colors.white,fontSize: 10),)),
                               )
                             ],
                           ),

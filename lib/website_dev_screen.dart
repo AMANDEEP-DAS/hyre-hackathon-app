@@ -41,7 +41,7 @@ class WebScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width/2.4,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage('https://source.unsplash.com/1000x1000/?person'),
+                          image: NetworkImage('https://source.unsplash.com/1000x1000/?boy'),
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -98,7 +98,7 @@ class WebScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width/2.4,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage('https://source.unsplash.com/1000x1000/?woman'),
+                          image: NetworkImage('https://source.unsplash.com/1000x1000/?person'),
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -121,7 +121,7 @@ class WebScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Icon(Icons.star,color: Colors.yellow,),
-                                  Text('4.0')
+                                  Text('4.5')
                                 ],
                               ),
                               Text(' ₹8000',style: TextStyle(color: Colors.red),)
@@ -178,7 +178,7 @@ class WebScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   Icon(Icons.star,color: Colors.yellow,),
-                                  Text('4.5')
+                                  Text('4.0')
                                 ],
                               ),
                               Text(' ₹10000',style: TextStyle(color: Colors.red),)
